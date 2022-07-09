@@ -22,7 +22,10 @@
         .centered {
             text-align: center;
         }
-
+        .jobs {
+            float: left;
+            margin-left: 10%;
+        }
         .navigation {
             width: 33%;
             display: flex;
@@ -34,7 +37,13 @@
             border: blue solid 1px;
             border-radius: 7px;
         }
-
+        .jobPosting {
+            height: 300px;
+            width: 450px;
+            border-radius: 7px;
+            border: blue 1px solid;
+            padding: 7px;
+        }
         .jobSearch {
             display: flex;
             justify-content: space-evenly;
@@ -44,6 +53,8 @@
         .options {
             display: flex;
             justify-content: space-evenly;
+            margin-left: 15%;
+            margin-right: 15%;
         }
     </style>
     </head>
@@ -63,9 +74,22 @@
         <div class = "centered">
         <p>Employers: <span class = "blueColor">Post a Job</span></p>
         </div>
+        <br>
         <hr>
         <div class = "options">
             <h1>Job Feed</h1>
             <h1>Recent Searches</h1>
+        </div>
+        <div class = "jobs">
+        <p>Jobs based on your searches - Updated 20 min ago</p>
+        <div class = "jobPosting">
+            <h3>IT Developer + Apprentice</h3>
+            <p>New Apprenticeship</p>
+            <p>Hartford, CT</p>
+        </div>
+        <br>
+        <div class = "jobPosting"></div>
+        <br>
+        <div class = "jobPosting"></div>
         </div>
     </body>
