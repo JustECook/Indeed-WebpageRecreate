@@ -22,21 +22,29 @@
         .centered {
             text-align: center;
         }
+
+        .icons {
+            height: 25px;
+            width: auto;
+        }
+        .icons:hover {
+            border-bottom: 2px solid blue;
+        }
         .jobs {
             float: left;
             margin-left: 10%;
+        }
+
+        .logo {
+            height: 35px;
+            width: auto;
         }
         .navigation {
             width: 33%;
             display: flex;
             justify-content: space-evenly;
         }
-        .search {
-            height: 40px;
-            width: 33%;
-            border: blue solid 1px;
-            border-radius: 7px;
-        }
+        
         .jobPosting {
             height: 300px;
             width: 450px;
@@ -48,6 +56,8 @@
             display: flex;
             justify-content: space-evenly;
             padding: 5px;
+            margin-left: 15%;
+            margin-right: 15%;
         }
 
         .options {
@@ -56,19 +66,51 @@
             margin-left: 15%;
             margin-right: 15%;
         }
+
+        .profile {
+            width: 33%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .search {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            width: 40%;
+            border: blue solid 1px;
+            border-radius: 7px;
+            padding: 3px;
+        }
+
+        #topBar {
+            display: flex;
+            justify-content: space-between;
+        }
     </style>
     </head>
     <body>
-        <div class = "navigation">
-            <p>Find Jobs</p>
-            <p>Company Reviews</p>
-            <p>Find Salaries</p>
-        </div>
+        <div id = "topBar">
+            <div class = "navigation">
+                <img class = "logo" src = "IndeedLogo.png">
+                <p class = "icons">Find Jobs</p>
+                <p class = "icons">Company Reviews</p>
+                <p class = icons>Find Salaries</p>
+            </div>
+            <div class = "profile">
+                <img class = "icons" src = "Messages.png">
+                <img class = "icons" src = "NotificationBell.png">
+                <img class = "icons" src = "Profile.png">
+                <p>|</p>
+                <p>Employers/Post jobs</p>
+            </div>
+        </div>  
         <hr>
         <br>
+        <br>
         <div class = "jobSearch">
-            <div class = "search"></div>
-            <div class = "search"></div>
+            <div class = "search"><b>What</b>Job title, keywords, or company</div>
+            <div class = "search"><b>Where</b> Remote</div>
             <button class = "proceed">Find Jobs</button>
         </div>
         <div class = "centered">
