@@ -12,9 +12,16 @@
             color: blue;
             font-weight: bold;
         }
-        button, .proceed {
+
+        .blueColor:hover {
+            text-decoration: underline;
+        }
+        .bold-text {
+            font-weight: bold;
+        }
+        button {
             color: white;
-            background: blue;
+            background: #2557a7;
             border-radius: 10px;
             padding: 10px;
         }
@@ -27,9 +34,15 @@
             height: 25px;
             width: auto;
         }
-        .icons:hover {
-            border-bottom: 2px solid blue;
+        .icons-container {
+            display: flex;
+            align-items: center;
+            height: 60px;
         }
+        .icons-container:hover {
+            border-bottom: 2px blue solid;
+        }
+        
         .jobs {
             float: left;
             margin-left: 10%;
@@ -49,8 +62,7 @@
             height: 300px;
             width: 450px;
             border-radius: 7px;
-            border: blue 1px solid;
-            padding: 7px;
+            border: grey 1px solid;
         }
         .jobSearch {
             display: flex;
@@ -66,24 +78,41 @@
             margin-left: 15%;
             margin-right: 15%;
         }
-
+        .proceed-button {
+            width: 100px;
+            border: 0;
+            font-weight: bold;
+        }
         .profile {
             width: 33%;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
         }
+
+        #results {
+            float: left;
+            margin-top: 30px;
+        }
+        .results {
+            margin-left: 25px;
+            width: 550px;
+            height: 500px;
+            border-radius: 7px;
+            border: grey 1px solid;
+        }
         .search {
             display: flex;
             align-items: center;
             height: 40px;
             width: 40%;
-            border: blue solid 1px;
+            border: grey solid 1px;
             border-radius: 7px;
             padding: 3px;
         }
 
         #topBar {
+            position: relative;
             display: flex;
             justify-content: space-between;
         }
@@ -93,39 +122,39 @@
         <div id = "topBar">
             <div class = "navigation">
                 <img class = "logo" src = "IndeedLogo.png">
-                <p class = "icons">Find Jobs</p>
-                <p class = "icons">Company Reviews</p>
-                <p class = icons>Find Salaries</p>
+                <div class = "icons-container"><p class = "icons">Find Jobs</p></div>
+                <div class = "icons-container"><p class = "icons">Company Reviews</p></div>
+                <div class = "icons-container"><p class = icons>Find Salaries</p></div>
             </div>
             <div class = "profile">
-                <img class = "icons" src = "Messages.png">
-                <img class = "icons" src = "NotificationBell.png">
-                <img class = "icons" src = "Profile.png">
+                <div class = "icons-container"><img class = "icons" src = "Messages.png"></div>
+                <div class = "icons-container"><img class = "icons" src = "NotificationBell.png"></div>
+                <div class = "icons-container"><img class = "icons" src = "Profile.png"></div>
                 <p>|</p>
-                <p>Employers/Post jobs</p>
+                <div class = "icons-container"><p>Employers/Post jobs</p></div>
             </div>
         </div>  
         <hr>
         <br>
         <br>
         <div class = "jobSearch">
-            <div class = "search"><b>What</b>Job title, keywords, or company</div>
-            <div class = "search"><b>Where</b> Remote</div>
-            <button class = "proceed">Find Jobs</button>
+            <div class = "search"><div class = "bold-text">What</div>Job title, keywords, or company</div>
+            <div class = "search"><div class = "bold-text">Where</div> Remote</div>
+            <button class = "proceed-button">Find jobs</button>
         </div>
         <div class = "centered">
-        <p>Employers: <span class = "blueColor">Post a Job</span></p>
+            <p>Employers: <span class = "blueColor">Post a Job</span></p>
         </div>
         <br>
         <hr>
         <div class = "options">
-            <h1>Job Feed</h1>
-            <h1>Recent Searches</h1>
+            <h2>Job feed</h2>
+            <h2>Recent Searches</h2>
         </div>
         <div class = "jobs">
         <p>Jobs based on your searches - Updated 20 min ago</p>
         <div class = "jobPosting">
-            <h3>IT Developer + Apprentice</h3>
+            <h3>IT Developer + Apprentice (ServiceNow Entry-Level)</h3>
             <p>New Apprenticeship</p>
             <p>Hartford, CT</p>
         </div>
@@ -134,4 +163,17 @@
         <br>
         <div class = "jobPosting"></div>
         </div>
+        <div id = "results">
+            <div class = "results"></div>
+        </div>
+
+        <script>
+            let jobPosting = document.querySelector(".jobPosting");
+
+            function borderBlue() {
+                jobPosting.style.borderColor = "blue";
+            }
+
+            jobPosting.addEventListener("click", borderBlue);
+        </script>
     </body>
